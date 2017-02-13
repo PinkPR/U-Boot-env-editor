@@ -33,6 +33,10 @@ class UBootVarList:
 
 		return raw_string
 
+	def print_env(self):
+		for x in self.vars:
+			print x
+
 class UBootEnvFile:
 	def __init__(self, filename):
 		self.filename = filename
