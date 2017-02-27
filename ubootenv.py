@@ -35,7 +35,8 @@ class UBootVarList:
 
 	def print_env(self):
 		for x in self.vars:
-			print x
+			print str(x) + " : " + str(self.vars[x])
+			print
 
 class UBootEnvFile:
 	def __init__(self, filename):
@@ -67,3 +68,6 @@ class UBootEnvFile:
 
 	def getenv(self, var):
 		return self.var_list.getenv(var)
+
+	def printenv(self):
+		self.var_list.print_env()
